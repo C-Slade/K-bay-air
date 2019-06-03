@@ -1,0 +1,113 @@
+$font-primary: 'Quicksand', sans-serif;
+$font-secondary: 'Raleway', sans-serif;
+
+$color-primary: rgb(143, 163, 194);
+$color-secondary: rgb(214, 232, 255);
+$color-bg: rgb(41, 47, 53);
+$color-bg-light: rgb(73, 84, 95);
+$color-bg-box-shadow: rgb(27, 27, 27);
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $color-bg;
+}
+header {
+    width: 100%;
+    height: 300px;
+    background-image: url(../img/header-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    box-shadow: 5px 5px 25px 5px $color-bg-box-shadow;
+
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 75px 0px;
+
+                img{
+                    width: 10rem;
+                    height: 10rem;
+                }
+                h1 {
+                    margin-left: 65px;
+                    font-family: $font-primary;
+                    font-size: 4rem;
+                    text-transform: uppercase;
+                    color: $color-primary;
+                }
+        }
+}
+.content-wrapper {
+    margin: 0px 50px;
+    padding-top: 300px;
+
+        .section-1 {
+            display: grid;
+            margin: 100px 10%;
+            grid-gap: 10%;
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+                .card-1 {
+                    background-color: $color-bg-light;
+                    min-height: 500px;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    text-align: center;
+                    box-shadow: 5px 5px 25px 5px $color-bg-box-shadow;
+                    border-radius: 5px;
+
+                        p {
+                            color: $color-primary;
+                            font-family: $font-primary;
+                            font-size: 3rem;
+                        }
+                }
+                .card-2 {
+                    background-color: transparent;
+                    min-height: 500px;
+                    display: grid;
+                    grid-gap: 40px;
+
+                        h2 {
+                            margin-top: 0px;
+                            text-align: center;
+                            font-size: 3.5rem;
+                            margin-top: .5rem;
+                            font-family: $font-secondary;
+                            color: $color-primary;
+                        }
+
+                        .sub-card {
+                            width: 100%;
+                            height: 5rem;
+                            background-color: $color-bg-light;                       
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            box-shadow: 5px 5px 25px 5px $color-bg-box-shadow;
+                            border-radius: 5px;
+                            padding: 0px 1rem;
+                            transition: ease-in-out .3s;
+                        
+                        }
+                        .sub-card:hover {
+                            transform: scale(1.02);
+        
+                        }
+                        p {
+                            color: $color-primary;
+                            font-family: $font-primary;
+                            font-size: 1.01rem;
+                            font-weight: bold;
+                        }
+
+                }
+        }
+}
